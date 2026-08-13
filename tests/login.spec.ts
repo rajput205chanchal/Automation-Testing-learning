@@ -37,6 +37,6 @@ test('login test', async () => {
     path: 'example.png'
   });
 
-  // Close browser
-  // await browser.close();
+  // Close browser();
+  await browser.close();
 });
