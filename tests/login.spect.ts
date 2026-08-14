@@ -1,7 +1,7 @@
-import { test ,expect,Browser,Page,Locator} from '@playwright/test';
-
- import {webkit,chromium,firefox} from '@playwright/test';
-
+import { test ,expect,Browser,Page,Locator} from '@playwright/test'; 
+   
+import {webkit,chromium,firefox} from '@playwright/test';
+     
 
  test ('login test',async()=>{
    const browser :Browser = await firefox.launch ({headless:false});
