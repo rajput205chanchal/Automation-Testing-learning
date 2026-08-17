@@ -17,8 +17,5 @@ page.setExtraHTTPHeaders({Authorization:authHeader});
 // pass and username directly link m n use krke can be used like this  by initialization
 
     await page.goto('https://the-internet.herokuapp.com/basis_auth');
-    
-
-
-    // await new Promise (()=>{});
-})
+// await new Promise (()=>{});
+})  
