@@ -1,0 +1,130 @@
+/* app.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050505;
+    overflow: hidden;
+}
+
+/* Background glow */
+body::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #00f0ff;
+    border-radius: 50%;
+    filter: blur(180px);
+    opacity: 0.12;
+}
+
+/* Login Box */
+.box {
+    position: relative;
+    width: 380px;
+    padding: 45px 40px;
+    background: #0d0d0d;
+    border: 1px solid #252525;
+    border-radius: 15px;
+    box-shadow:
+        0 0 30px rgba(0, 240, 255, 0.08),
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+.form h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Input container */
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+.inputBox input {
+    width: 100%;
+    padding: 14px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 2px solid #333;
+    transition: 0.3s;
+}
+
+/* Floating label */
+.inputBox span {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    color: #777;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Move label when typing */
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+    top: -12px;
+    left: 5px;
+    font-size: 12px;
+    color: #00f0ff;
+}
+
+/* Input bottom line */
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #00f0ff;
+    transition: 0.4s;
+}
+
+.inputBox input:focus ~ i {
+    width: 100%;
+}
+
+/* Login Button */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #00f0ff;
+    color: #050505;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #00d9e8;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}

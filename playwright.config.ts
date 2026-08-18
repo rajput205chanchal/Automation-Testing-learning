@@ -47,6 +47,7 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+      testIdAttribute:'data-chanchalid'
     },
 
     /* Test against mobile viewports. */
